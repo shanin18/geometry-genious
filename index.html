@@ -13,13 +13,95 @@
     <header>
         <nav class="container mx-auto md:flex items-center justify-between bg-sky-100 px-6 py-5 md:px-10  my-12 rounded-lg">
             <div>
-                <h1 class="text-4xl font-bold">Interactive</h1>
+                <h1 class="text-4xl font-bold text-gray-700">Interactive</h1>
                 <h2 class="text-3xl text-gray-500">Geometry Genius</h2>
             </div>
-            <button id="btn-blog" class="bg-sky-500 text-white py-2 px-9 rounded-xl text-xl mt-5 md:mt-0">Blog</button>
+            <button id="btn-blog" class="bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-5 md:mt-0">Blog</button>
         </nav>
     </header>
     <!-- header ends -->
-    
+
+    <main class="container mx-auto">
+        <div class="grid xl:grid-cols-5 gap-4">
+            <div class="xl:col-span-3 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
+                    <img class="mx-auto" src="images/triangle.png" alt="Triangle image">
+                    <div class="card-details">
+                        <h4 class="text-2xl text-gray-700 mt-6 font-bold mb-2">Triangle</h4>
+                        <p class="text-gray-500 mb-5">Area (A) = 0.5 x b x h</p>
+                        <div class="flex justify-center gap-4">
+                            <label for="base" class="text-gray-500">
+                                <input id="base" class="bg-gray-100 px-2 py-3 w-24 rounded-lg" placeholder="b" type="text">
+                                cm
+                            </label>
+                            <label for="height" class="text-gray-500">
+                                <input id="height" class="bg-gray-100 px-2 py-3 w-24 rounded-lg" placeholder="h" type="text">
+                                cm
+                            </label>
+                        </div>
+                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
+                    <img class="mx-auto" src="images/rectangle.png" alt="Triangle image">
+                    <div class="card-details">
+                        <h4 class="text-2xl text-gray-700 mt-6 font-bold  mb-2">Rectangle</h4>
+                        <p class="text-gray-500 mb-5">Area (A) = w x l</p>
+                        <div class="flex justify-center gap-4">
+                            <label for="base" class="text-gray-500">
+                                <input id="base" class="bg-gray-100 px-2 py-3 w-24 rounded-lg" placeholder="w" type="text">
+                                cm
+                            </label>
+                            <label for="height" class="text-gray-500">
+                                <input id="height" class="bg-gray-100 px-2 py-3 w-24 rounded-lg" placeholder="l" type="text">
+                                cm
+                            </label>
+                        </div>
+                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                    </div>
+                </div>                
+                <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
+                    <img class="mx-auto mt-2" src="images/parallelogram.png" alt="Triangle image">
+                    <div class="card-details">
+                        <h4 class="text-2xl text-gray-700 mt-6 font-bold  mb-2">Parallelogram</h4>
+                        <p class="text-gray-500 mb-5">Area (A) = b x      h</p>
+                        <p class="text-gray-500">b = 10cm , h = 12cm</p>
+                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                    </div>
+                </div>                
+                <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
+                    <img class="mx-auto" src="images/rhombus.png" alt="Triangle image">
+                    <div class="card-details">
+                        <h4 class="text-2xl text-gray-700 mt-6 font-bold mb-2">Rhombus</h4>
+                        <p class="text-gray-500 mb-5">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                        <p class="text-gray-500">d<sub>1</sub> = 16cm , d<sub>2</sub> = 8cm</p>
+                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                    </div>
+                </div>                
+                <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
+                    <img class="mx-auto" src="images/pentagon.png" alt="Triangle image">
+                    <div class="card-details">
+                        <h4 class="text-2xl text-gray-700 mt-6 font-bold mb-2">Pentagon</h4>
+                        <p class="text-gray-500 mb-5">Area (A) = 0.5 x p x b</p>
+                        <p class="text-gray-500">p = 6cm , b = 10cm</p>
+                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                    </div>
+                </div>                
+                <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
+                    <img class="mx-auto" src="images/ellipse.png" alt="Triangle image">
+                    <div class="card-details">
+                        <h4 class="text-2xl text-gray-700 mt-6 font-bold mb-2">Ellipse</h4>
+                        <p class="text-gray-500 mb-5">Area (A) = πab</p>
+                        <p class="text-gray-500">a = 6cm , b = 10cm</p>
+                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                    </div>
+                </div>                
+            </div>
+            <div class="xl:col-span-2 border">
+                <h4 class="border-b-2 w-fit border-gray-700 font-bold text-gray-700 mx-auto mt-8">Area Calculation</h4>
+            </div>
+        </div>
+    </main>
+    <!-- main ends -->
 </body>
 </html>

@@ -1,0 +1,4 @@
+Area (A) = W X l
+Area (A) = 0.5 X b X h
+
+w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-16
