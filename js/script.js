@@ -8,3 +8,8 @@ for(const card of cards){
         card.style.transition = ".4s"; 
     });
 }
+
+// change location function
+document.getElementById("btn-blog").addEventListener("click", function(){
+    window.location.href = "blog.html";
+});
