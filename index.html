@@ -22,7 +22,7 @@
     <!-- header ends -->
 
     <main class="container mx-auto">
-        <div class="grid xl:grid-cols-5 gap-4">
+        <section class="grid xl:grid-cols-5 gap-4">
             <div class="xl:col-span-3 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
                     <img class="mx-auto" src="images/triangle.png" alt="Triangle image">
@@ -39,7 +39,7 @@
                                 cm
                             </label>
                         </div>
-                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12 hover:bg-sky-600" >Calculate</button>
                     </div>
                 </div>
                 <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
@@ -57,7 +57,7 @@
                                 cm
                             </label>
                         </div>
-                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                        <button id="btn-rectangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12 hover:bg-sky-600" >Calculate</button>
                     </div>
                 </div>                
                 <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
@@ -66,7 +66,7 @@
                         <h4 class="text-2xl text-gray-700 mt-6 font-bold  mb-2">Parallelogram</h4>
                         <p class="text-gray-500 mb-5">Area (A) = b x      h</p>
                         <p class="text-gray-500">b = 10cm , h = 12cm</p>
-                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                        <button id="btn-parallelogram" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12 hover:bg-sky-600" >Calculate</button>
                     </div>
                 </div>                
                 <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
@@ -75,7 +75,7 @@
                         <h4 class="text-2xl text-gray-700 mt-6 font-bold mb-2">Rhombus</h4>
                         <p class="text-gray-500 mb-5">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                         <p class="text-gray-500">d<sub>1</sub> = 16cm , d<sub>2</sub> = 8cm</p>
-                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                        <button id="btn-rhombus" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12 hover:bg-sky-600" >Calculate</button>
                     </div>
                 </div>                
                 <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
@@ -84,23 +84,23 @@
                         <h4 class="text-2xl text-gray-700 mt-6 font-bold mb-2">Pentagon</h4>
                         <p class="text-gray-500 mb-5">Area (A) = 0.5 x p x b</p>
                         <p class="text-gray-500">p = 6cm , b = 10cm</p>
-                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                        <button id="btn-pentagon" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12 hover:bg-sky-600" >Calculate</button>
                     </div>
                 </div>                
-                <div class="flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
+                <div class="card-6 flex flex-col justify-between rounded-lg text-center px-11 py-12 border">
                     <img class="mx-auto" src="images/ellipse.png" alt="Triangle image">
                     <div class="card-details">
                         <h4 class="text-2xl text-gray-700 mt-6 font-bold mb-2">Ellipse</h4>
                         <p class="text-gray-500 mb-5">Area (A) = πab</p>
                         <p class="text-gray-500">a = 6cm , b = 10cm</p>
-                        <button id="btn-triangle" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12" >Calculate</button>
+                        <button id="btn-ellipse" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12 hover:bg-sky-600" >Calculate</button>
                     </div>
                 </div>                
             </div>
             <div class="xl:col-span-2 border">
                 <h4 class="border-b-2 w-fit border-gray-700 font-bold text-gray-700 mx-auto mt-8">Area Calculation</h4>
             </div>
-        </div>
+        </section>
     </main>
     <!-- main ends -->
 </body>
