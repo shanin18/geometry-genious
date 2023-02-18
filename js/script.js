@@ -67,6 +67,28 @@ document.getElementById("btn-rectangle").addEventListener("click", function(){
     }
 });
 
+// parallelogram 
+document.getElementById("btn-parallelogram").addEventListener("click", function(){
+    const shapeName = getTextElementValue("parallelogram");
+    const parallelogramBaseValue = getTextElementValue("parallelogram-b-value");
+    const parallelogramHeightValue = getTextElementValue("parallelogram-h-value");
+    const areaOfParallelogram = parallelogramBaseValue * parallelogramHeightValue;
+
+    // show the data
+    displayData(shapeName, areaOfParallelogram);
+});
+
+// Rhombus
+document.getElementById("btn-rhombus").addEventListener("click", function(){
+    const shapeName = getTextElementValue("rhombus");
+    const rhombusDiagonalValue1 = getTextElementValue("rhombus-d1-value");
+    const rhombusDiagonalValue2 = getTextElementValue("rhombus-d2-value");
+    const areaOfRhombus = 0.5 * parseFloat(rhombusDiagonalValue1) * parseFloat(rhombusDiagonalValue2);
+
+    // show the data
+    displayData(shapeName, areaOfRhombus);
+});
+
 
 function displayData(shapeName, totalArea, convert){
     const container = document.getElementById("tbody");
