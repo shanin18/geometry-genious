@@ -89,6 +89,18 @@ document.getElementById("btn-rhombus").addEventListener("click", function(){
     displayData(shapeName, areaOfRhombus);
 });
 
+// Pentagon
+document.getElementById("btn-pentagon").addEventListener("click", function(){
+    const shapeName = getTextElementValue("pentagon");
+    const pentagonValueOfP = getTextElementValue("pentagon-p-value");
+    const pentagonValueOfB = getTextElementValue("pentagon-b-value");
+    const AreaOfPentagon = 0.5 * parseFloat(pentagonValueOfP) * parseFloat(pentagonValueOfB);
+
+    // show the data
+    displayData(shapeName, AreaOfPentagon);
+
+});
+
 
 function displayData(shapeName, totalArea, convert){
     const container = document.getElementById("tbody");
@@ -96,7 +108,7 @@ function displayData(shapeName, totalArea, convert){
     tr.innerHTML = `
     <td>${1}</td>
     <td>${shapeName}</td>
-    <td>${totalArea}</td>
+    <td>${totalArea}cm<sup>2</sup></td>
     <td>${convert}</td>
     `;
     container.appendChild(tr);
