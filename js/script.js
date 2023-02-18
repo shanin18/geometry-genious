@@ -14,7 +14,6 @@ document.getElementById("btn-blog").addEventListener("click", function(){
     window.location.href = "blog.html";
 });
 
-
 function getInputValue(id){
     const inputField = document.getElementById(id);
     const inputFieldValue = inputField.value;
@@ -29,8 +28,11 @@ function getTextElementValue(id){
     return textElementValue;
 }
 
+let serial = 0;
+
 // triangle
 document.getElementById("btn-triangle").addEventListener("click", function(){
+    serial++;
     const shapeName = getTextElementValue("triangle");
     const triangleBaseValue = getInputValue("base");
     const triangleHeightValue = getInputValue("height");
@@ -51,6 +53,7 @@ document.getElementById("btn-triangle").addEventListener("click", function(){
 
 // rectangle
 document.getElementById("btn-rectangle").addEventListener("click", function(){
+    serial++;
     const shapeName = getTextElementValue("rectangle");
     const rectangleWidthValue = getInputValue("width");
     const rectangleLengthValue = getInputValue("length");
@@ -69,6 +72,7 @@ document.getElementById("btn-rectangle").addEventListener("click", function(){
 
 // parallelogram 
 document.getElementById("btn-parallelogram").addEventListener("click", function(){
+    serial++;
     const shapeName = getTextElementValue("parallelogram");
     const parallelogramBaseValue = getTextElementValue("parallelogram-b-value");
     const parallelogramHeightValue = getTextElementValue("parallelogram-h-value");
@@ -80,6 +84,7 @@ document.getElementById("btn-parallelogram").addEventListener("click", function(
 
 // Rhombus
 document.getElementById("btn-rhombus").addEventListener("click", function(){
+    serial++;
     const shapeName = getTextElementValue("rhombus");
     const rhombusDiagonalValue1 = getTextElementValue("rhombus-d1-value");
     const rhombusDiagonalValue2 = getTextElementValue("rhombus-d2-value");
@@ -91,6 +96,7 @@ document.getElementById("btn-rhombus").addEventListener("click", function(){
 
 // Pentagon
 document.getElementById("btn-pentagon").addEventListener("click", function(){
+    serial++;
     const shapeName = getTextElementValue("pentagon");
     const pentagonValueOfP = getTextElementValue("pentagon-p-value");
     const pentagonValueOfB = getTextElementValue("pentagon-b-value");
@@ -101,15 +107,32 @@ document.getElementById("btn-pentagon").addEventListener("click", function(){
 
 });
 
+// Ellipse 
+document.getElementById("btn-ellipse").addEventListener("click", function(){
+    serial++;
+    const shapeName = getTextElementValue("ellipse");
+    const ellipsesValueA = getTextElementValue("ellipses-a-value");
+    const ellipsesValueB = getTextElementValue("ellipses-b-value");
+    const areaOfEllipses = Math.PI * ellipsesValueA * ellipsesValueB;
+
+    // show the data
+    displayData(shapeName, areaOfEllipses,);
+});
+
 
 function displayData(shapeName, totalArea, convert){
     const container = document.getElementById("tbody");
     const tr = document.createElement("tr");
     tr.innerHTML = `
-    <td>${1}</td>
-    <td>${shapeName}</td>
-    <td>${totalArea}cm<sup>2</sup></td>
-    <td>${convert}</td>
+    <td class="pt-4 text-center">${serial}</td>
+    <td class="pt-4 text-center">${shapeName}</td>
+    <td class="pt-4 text-center">${totalArea.toFixed(2)}cm<sup>2</sup></td>
+    <td class="pt-4 text-center">
+    <button class="bg-sky-500 text-white py-2 px-3 rounded-lg hover:bg-sky-600">
+     convert to m
+     <sup>2</sup>
+     <button>
+    </td>
     `;
     container.appendChild(tr);
 }

@@ -23,7 +23,7 @@
 
     <main class="container mx-auto">
         <section class="lg:flex md:justify-between">
-            <div class="card-container lg:w-[65%] grid md:grid-cols-2 xl:grid-cols-3 gap-4 px-2 md:px-0">
+            <div class="card-container lg:w-[63%] grid md:grid-cols-2 xl:grid-cols-3 gap-4 px-2 md:px-0">
                 <div class="card flex flex-col justify-between rounded-lg text-center p-5 md:px-11 md:py-12 border shadow-lg">
                     <img class="mx-auto" src="images/triangle.png" alt="Triangle image">
                     <div class="card-details">
@@ -102,36 +102,33 @@
                         <h4 id="ellipse" class="text-2xl text-gray-700 mt-6 font-bold mb-2">Ellipse</h4>
                         <p class="text-gray-500 mb-5">Area (A) = πab</p>
                         <div class="ellipsis-values flex justify-center">
-                            <p class="text-gray-500">a = <span class="ellipsis-a-value">10</span>cm ,</p>
-                            <p class="text-gray-500 ml-2">b = <span class="ellipsis-b-value">4</span>cm</p>
+                            <p class="text-gray-500">a = <span id="ellipses-a-value">10</span>cm ,</p>
+                            <p class="text-gray-500 ml-2">b = <span id="ellipses-b-value">4</span>cm</p>
                         </div>
                          
                         <button id="btn-ellipse" class="w-full bg-sky-500 text-white py-2 px-9 rounded-lg text-xl mt-12 hover:bg-sky-600" >Calculate</button>
                     </div>
                 </div>                
             </div>
-            <div class="lg:w-[34%] border mt-4 lg:mt-0">
-                <h4 class="border-b-2 w-fit border-gray-700 font-bold text-gray-700 mx-auto my-4">Area Calculation</h4>
-                <div class="overflow-x-auto">
-                    <table class="table w-full">
-                      <!-- head -->
-                      <thead>
-                        <tr>
-                          <th>No</th>
-                          <th>Shape</th>
-                          <th>Area</th>
-                          <th>Convert</th>
-                        </tr>
-                      </thead>
-                      <tbody id="tbody">
-                        <!-- rows -->
-                      </tbody>
-                    </table>
-                  </div>
+            <div class="lg:w-[36%] border mt-4 lg:mt-0">
+                <h4 class="border-b-2 w-fit border-gray-700 font-bold text-gray-700 text-xl mx-auto my-4">Area Calculation</h4>
+                <table class="w-full">
+                    <thead class="bg-gray-200">
+                        <th class="py-4">Shape</th>
+                        <th class="py-4">No</th>
+                        <th class="py-4">Area</th>
+                        <th class="py-4">Convert</th>
+                    </thead>
+                    <tbody id="tbody">
+                        <!--dynamic table rows -->
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
     <!-- main ends -->
+
+
 
     <script src="js/script.js"></script>
 </body>
