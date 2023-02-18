@@ -5,15 +5,18 @@ for(const card of cards){
         const randomNumber = Math.floor(Math.random() * 1677215);
         const randomCode = "#" + randomNumber.toString(16);
         card.style.backgroundColor = randomCode;
-        card.style.transition = ".4s"; 
+        card.style.transition = ".5s"; 
     });
 }
+
 
 // change location
 document.getElementById("btn-blog").addEventListener("click", function(){
     window.location.href = "blog.html";
 });
 
+
+// getInputValue function
 function getInputValue(id){
     const inputField = document.getElementById(id);
     const inputFieldValue = inputField.value;
@@ -22,17 +25,21 @@ function getInputValue(id){
     return inputFieldValueToNumber;
 }
 
+
+// getTextElementValue function
 function getTextElementValue(id){
     const textElementField = document.getElementById(id);
     const  textElementValue = textElementField.innerText;
     return textElementValue;
 }
 
+
 let serial = 0;
+
 
 // triangle
 document.getElementById("btn-triangle").addEventListener("click", function(){
-    serial++;
+    
     const shapeName = getTextElementValue("triangle");
     const triangleBaseValue = getInputValue("base");
     const triangleHeightValue = getInputValue("height");
@@ -44,6 +51,7 @@ document.getElementById("btn-triangle").addEventListener("click", function(){
         return;
     }
     else{
+        serial++;
         // show the data
         displayData(shapeName, areaOfTriangle);
     }
@@ -53,7 +61,7 @@ document.getElementById("btn-triangle").addEventListener("click", function(){
 
 // rectangle
 document.getElementById("btn-rectangle").addEventListener("click", function(){
-    serial++;
+    
     const shapeName = getTextElementValue("rectangle");
     const rectangleWidthValue = getInputValue("width");
     const rectangleLengthValue = getInputValue("length");
@@ -65,10 +73,12 @@ document.getElementById("btn-rectangle").addEventListener("click", function(){
         return;
     }
     else{
+        serial++;
         // show the data
         displayData(shapeName, areaOfRectangle);
     }
 });
+
 
 // parallelogram 
 document.getElementById("btn-parallelogram").addEventListener("click", function(){
@@ -82,6 +92,7 @@ document.getElementById("btn-parallelogram").addEventListener("click", function(
     displayData(shapeName, areaOfParallelogram);
 });
 
+
 // Rhombus
 document.getElementById("btn-rhombus").addEventListener("click", function(){
     serial++;
@@ -93,6 +104,7 @@ document.getElementById("btn-rhombus").addEventListener("click", function(){
     // show the data
     displayData(shapeName, areaOfRhombus);
 });
+
 
 // Pentagon
 document.getElementById("btn-pentagon").addEventListener("click", function(){
@@ -107,19 +119,21 @@ document.getElementById("btn-pentagon").addEventListener("click", function(){
 
 });
 
+
 // Ellipse 
 document.getElementById("btn-ellipse").addEventListener("click", function(){
     serial++;
     const shapeName = getTextElementValue("ellipse");
-    const ellipsesValueA = getTextElementValue("ellipses-a-value");
-    const ellipsesValueB = getTextElementValue("ellipses-b-value");
-    const areaOfEllipses = Math.PI * ellipsesValueA * ellipsesValueB;
+    const ellipseValueA = getTextElementValue("ellipses-a-value");
+    const ellipseValueB = getTextElementValue("ellipses-b-value");
+    const areaOfEllipse = Math.PI * ellipseValueA * ellipseValueB;
 
     // show the data
-    displayData(shapeName, areaOfEllipses,);
+    displayData(shapeName, areaOfEllipse,);
 });
 
 
+// displayData function
 function displayData(shapeName, totalArea, convert){
     const container = document.getElementById("tbody");
     const tr = document.createElement("tr");
@@ -129,8 +143,7 @@ function displayData(shapeName, totalArea, convert){
     <td class="pt-4 text-center">${totalArea.toFixed(2)}cm<sup>2</sup></td>
     <td class="pt-4 text-center">
     <button class="bg-sky-500 text-white py-2 px-3 rounded-lg hover:bg-sky-600">
-     convert to m
-     <sup>2</sup>
+     convert to m<sup>2</sup>
      <button>
     </td>
     `;
